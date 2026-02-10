@@ -1,0 +1,20 @@
+package in.pwskills.nitin.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("mysqlDao")
+public class EmployeeMySQLDaoImpl implements IEmployeeDao {
+	
+	@Autowired
+	private DataSource ds;
+	
+	@Override
+	public void getConnection() {
+		System.out.println(ds);
+		
+	}
+
+}
